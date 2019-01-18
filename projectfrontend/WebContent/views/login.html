@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-image: url("resources/images/login1.jpg");
+  background-repeat: no-repeat;
+  background-position: left center;
+  margin-right: 200px;
+  background-attachment: fixed;
+}
+.button {
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #000000;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+</style>
+
+<title>Login</title>
+</head>
+<body>
+<span style="color:red">{{error.message}}</span>
+<h3 style="text-align:center;color:brown;font-style:Italic; text-shadow: 3px 2px red;"><marquee> Sign In To Continue</marquee></h3>
+
+<form>
+ <div class="row">
+ <p style="text-align:center;">
+
+      <label for="uname"><b>Username</b></label>
+      <input type="email" placeholder="Enter Email" name="uname" required="true" ng-model="user.email">
+     
+</p>
+<p style="text-align:center;">
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" ng-model="user.password">
+</p>
+<p style="text-align:center;">
+      <button class="button" style="color:Red;" ng-click="login(user)">Let Me In</button>
+     </p>
+    </div>
+
+</form>
+
+</body>
+</html>

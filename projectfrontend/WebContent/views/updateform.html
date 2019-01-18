@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url("resources/images/register3.jpg");
+  background-size: cover;
+  position: relative;
+  height: 300px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+  
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+  background-color: rgb(238, 130, 238);
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+</style>
+<title>Insert title here</title>
+</head>
+<body>
+<form>
+ <div class="container">
+ 
+      <label for="email"><b>Email</b></label>
+      <input type="text"  name="email"  ng-model="user.email" disabled>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" ng-model="user.password">
+
+      <label for="first"><b>Firstname</b></label>
+      <input type="text" placeholder="Enter firstname" name="first" ng-model="user.firstname">
+
+      <label for="last"><b>lastname</b></label>
+      <input type="text" placeholder="Enter lastname" name="last" ng-model="user.lastname">
+
+      <label for="number"><b>Phonenumber</b></label>
+      <input type="text" placeholder="Enter phonenumber" name="number" ng-model="user.phonenumber">
+
+ <label for="select"> <b>Select Role </b></label> 
+<select ng-model="user.role">
+
+<option label="STUDENT">STUDENT
+<option label="EMPLOYEE">EMPLOYEE
+<option label="ADMIN">ADMIN
+</select>
+
+<button class="registerbtn" ng-click="update(user)">Edit</button>
+
+</div>
+</form>
+</body>
+</html>
+
